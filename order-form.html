@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link type="stylesheet" href="order-form-style.css">
+    <script src="modernizr.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <form name="order" action="post" action="/submit">
+        <h1>Order Form</h1>
+        <fieldset>
+            <legend>Contact Details</legend>
+            <ul>
+                <li>
+                    <label class="required">
+                        <div>Full Name</div>
+                        <input type="text" name="name" required autofocus autocapitalize="words">
+                    </label>
+                </li>
+                <li>
+                    <label class="required">
+                        <div>Email Address</div>
+                        <input type="email" name="email" required>
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <div>Postal Address</div>
+                        <input type="text" name="address1" placeholder="Address Line 1">
+                    </label>
+                    <div>&nbsp;</div>
+                    <input type="text" name="address2" placeholder="Address Line 2">
+                    <div>&nbsp;</div>
+                    <input type="text" name="city" class="city" placeholder="Town/City">
+                    <div>&nbsp;</div>
+                    <input type="text" name="state" class="state" placeholder="State">
+                    <div>&nbsp;</div>
+                    <input type="text" name="zip" class="zip" placeholder="Zip Code">
+                    <div>&nbsp;</div>
+                    <select name="country" class="country">
+                        <option value="0">Country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                    </select>
+                </li>
+                <li>
+                    <label>
+                        <div>Home Phone No.</div>
+                        <input type="tel" name="homephone">
+                    </label>
+                </li> 
+                <li>
+                    <label>
+                        <div>Cell Phone No.</div>
+                        <input type="tel" name="cellphone">
+                    </label>
+                </li> 
+                <li>
+                    <label>
+                        <div>Skype Name</div>
+                        <input type="text" name="skype">
+                    </label>
+                </li> 
+                <li>
+                    <label>
+                        <div>Twitter</div>
+                        <span class="twitter_prefix">@</span>
+                        <input type="text" class="twitter" name="twitter">
+                    </label>
+                </li> 
+            </ul>
+        </fieldset>
+        <div class="buttons">
+            <button type="submit" value="Submit Order"></button>
+            <button type="submit" id="saveOrder" value="Save Order"></button>
+        </div>
+    </form>
+</body>
+</html>
